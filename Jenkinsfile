@@ -2,10 +2,8 @@ pipeline {
     agent any
 
     tools {
-        terraform 'terraform'
+      terraform 'Terraform'
     }
-
-
     stages {
         stage('Terraform Plan') {
             steps {
