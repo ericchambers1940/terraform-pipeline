@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Terraform Plan') {
             steps {
-                sh 'll'
+                sh 'ls -l'
                 sh 'tree'
                 echo 'INFO - Generating Terraform Plans'
                 sh '${TERRAFORM} plan'
