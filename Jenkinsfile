@@ -1,13 +1,15 @@
 pipeline {
     agent any
 
+    tools {
+        terraform 'terraform'
+    }
+
+
     stages {
         stage('Terraform Plan') {
             steps {
-                sh 'ls -l'
-                sh 'tree'
-                echo 'INFO - Generating Terraform Plans'
-                sh '${TERRAFORM} plan'
+                sh 'terraform plan'
 
             }
         }
