@@ -2,9 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Terraform Plan') {
             steps {
-                echo 'Hello World'
+                echo 'INFO - Generating Terraform Plans'
+                sh '${TERRAFORM_BIN}terraform.exe plan'
+
             }
         }
     }
