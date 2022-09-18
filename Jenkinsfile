@@ -7,7 +7,9 @@ pipeline {
     stages {
         stage('Terraform Plan') {
             steps {
-                sh 'terraform plan'
+                sh 'terraform fmt'
+                sh 'terraform test'
+                sh 'terraform apply'
 
             }
         }
