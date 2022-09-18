@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Terraform Plan') {
             steps {
-                sh '/var/jenkins_home/tools/terraform plan'
+                sh 'terraform plan'
 
             }
         }
